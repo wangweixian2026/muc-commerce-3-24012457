@@ -1,0 +1,6 @@
+﻿chart_id,file_name,business_question,chart_type,key_finding,limitation
+01,01_category_bar.png,不同用户生命周期的流失率是否存在差异,bar,用户生命周期越长，流失率持续降低，新用户流失风险最高，24个月以上老用户无流失,仅对比分组流失率，未结合用户消费行为做多维度交叉分析
+02,02_behavior_scatter.png,用户订单数与返现金额呈现什么关系,scatter,下单量与返利金额正相关，流失用户集中在低下单、低返利区间,CashbackAmount仅为返现金额，不等于GMV和实际营收，无法衡量收益规模
+03,03_ordered_line.png,流失率如何随生命周期阶段变化,line,流失率随用户使用时长稳步下降,属于横向分组对比，非时序历史数据，无法分析运营长期变化趋势
+04,04_composition_chart.png,全部用户由哪些生命周期类别构成,pie_or_bar,平台用户以7-24个月中期用户为主，新用户整体体量占比最低，拉新存在优化空间,环形图不适合超过5类细分维度的精细化对比，仅适合整体结构概览
+05,day06_visualization_summary.png,整体概览,dashboard,四类可视化结果相互印证，用户生命周期和消费返利行为是流失核心影响因素,仅为描述性可视化分析，未做统计显著性检验，缺少更多用户行为特征辅助分析

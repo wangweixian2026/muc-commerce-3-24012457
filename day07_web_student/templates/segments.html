@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>生命周期分层详情</title>
+    <style>
+        table{border-collapse: collapse;width: 80%;margin:20px 0;}
+        th,td{padding:10px 14px;border:1px solid #ddd;text-align:center;}
+        th{background-color:#f5f7fa;}
+        .back-btn{padding: 8px 18px; font-size: 14px; background-color: #2c7be5; color: #fff; border: none; border-radius: 4px; cursor: pointer;}
+        body{margin:30px;}
+    </style>
+</head>
+<body>
+    <h2>各生命周期阶段流失详情</h2>
+    <table>
+        <tr>
+            <th>生命周期阶段</th>
+            <th>用户数量</th>
+            <th>流失人数</th>
+            <th>流失率</th>
+        </tr>
+        {% for item in seg_data %}
+        <tr>
+            <td>{{ item.TenureGroup }}</td>
+            <td>{{ item.用户数 }}</td>
+            <td>{{ item.流失人数 }}</td>
+            <!-- 只保留一组%%用来输出百分号 -->
+            <td>{{ "%.2f%%"|format(item.流失率*100) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button class="back-btn" onclick="window.location.href='/'">返回数据看板首页</button>
+</body>
+</html>
